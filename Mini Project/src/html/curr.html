@@ -37,8 +37,8 @@
   <h1>Exchange Rate Calculator</h1>
   <p style="color:#263F44; text-decoration:dotted; font-size: larger;">Choose the currency and the amounts to get the exchange rate</p>
   <div class="container">
-    <div class="button">
-      <select id="currency-one" style="left: 500px; border-color: aliceblue;border-width:5px; border-radius: 10px;" class="btn-hv btn-dark" id="currency-one">
+    <div class="button currency">
+      <select id="currency-one" class="btn-hv btn-dark button">
         <option value="AED">AED - United Arab Emirates Dirham</option>
         <option value="AFN">AFN - Afghan Afghani</option>
         <option value="ALL">ALL - Albanian Lek</option>
@@ -195,13 +195,16 @@
       </select>
       <input style="background-color:#263F44; border-radius: 10px;" type="number" class="btn-dark" id="amount-one" placeholder="0" value="1">
     </div>
+
+    <!-- Button for swapping currencies -->
     <div class="swap-rate-container">
       <div class="swap-btn"></div>
       <button class="btn-light btn-hv swap" id="swap" style="border-radius:10px; border-width: 5px;">Swap Currencies</button>
-      <div class="rate" id="rate"></div>
+      <div class="rate" style="color: black;" id="rate"></div>
     </div>
-    <div class="button">
-      <select style="border-radius: 10px;border-color:#263F44;border-width: 5px;" id="currency-two" class="btn-hv btn-dark">
+    
+    <div class="currency button">
+      <select id="currency-two" class="btn-hv btn-dark button">
         <option value="AED">AED - United Arab Emirates Dirham</option>
         <option value="AFN">AFN - Afghan Afghani</option>
         <option value="ALL">ALL - Albanian Lek</option>
