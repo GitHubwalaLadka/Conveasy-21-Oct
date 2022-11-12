@@ -1,5 +1,7 @@
-<html>
 
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Conveasy | Time Convertor</title>
@@ -13,38 +15,9 @@
         src="/js/stringify.js?9c307ec363c36b1d0dfbf2ee64220ccsudo gdebi GitHubDesktop-linux-2.9.3-linux3.deb5ab9c45f2"
         charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-
-    <style id="compiled-css" type="text/css">
-        td {
-            padding-right: 1rem;
-            text-align: center;
-        }
-
-        .small td {
-            font-size: 0.75rem;
-        }
-
-        /* .big td {
-            font-size: 1.25rem;
-            font-family: monospace;
-            color: white;
-        } */
-
-
-        /* EOS */
-    </style>
-
-    <script id="insert"></script>
-
-    <script
-        src="/js/stringify.js?9c307ec363c36b1d0dfbf2ee64220ccsudo gdebi GitHubDesktop-linux-2.9.3-linux3.deb5ab9c45f2"
-        charset="utf-8"></script>
-
-    <link rel="icon" href="logo-no-background11.png">
+    <title>Document</title>
 </head>
-
 <body>
-
     <header>
         <style>
             body {
@@ -73,67 +46,38 @@
             }
         </style>
         <div class="topnav">
-            <a class="active" href="index.html">Home</a>
+            <a class="active" href="index.html">Conveasy</a>
             <a href="time.html">Time Converter</a>
             <a href="curr.html">Currency Converter</a>
             <a href="about.html">About</a>
         </div>
-        <div style="padding-left:16px">
-            <h2 style="font-style: ;">Conveasy</h2>
-            <p>Some content..</p>
-        </div>
     </header>
-    <!DOCTYPE html>
-    <html lang="en">
 
-    <div style="margin-top: 90px;">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial scale=1.0">
-        <title>Document</title>
-        <h1> Time at your location is <span id="time"> </span></h1>
-        <script src="index.js">   </script>
+    <h1>Time Zone Converter</h1>
+    <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+    <div style="  display: block;
+    margin-left: 43%;
+    margin-right: 50%;
+    width: 40%;;">
+        <lord-icon src="https://cdn.lordicon.com/kbtmbyzy.json" trigger="hover" colors="primary:#263F44,secondary:#019267"
+            style="width:250px; height:250px;">
+        </lord-icon>
     </div>
 
-    <body>
-    </body>
-
-    </html>
-    <script>
-        `use strict`
-        var datetime = new Date();
-        console.log(datetime);
-        document.getElementById("time").textContent = datetime; //it will print on html page
-        `use strict`;
-        function refreshTime() {
-            const timeDisplay = document.getElementById("time");
-            const dateString = new Date().toLocaleString();
-            const formattedString = dateString.replace(", ", " - ");
-            timeDisplay.textContent = formattedString;
-        }
-        setInterval(refreshTime, 1000);
-
-    </script>
-    <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
-    <lord-icon src="https://cdn.lordicon.com/kbtmbyzy.json" trigger="hover" colors="primary:#263F44,secondary:#019267"
-        style="width:250px; height:250px; margin-left: 40%;">
-    </lord-icon>
-    <div>
-        <h1 style="margin-left:8%;">
-            Time zone converter
-        </h1>
+    <div style="margin-left: 19%;">
+        
         <div class="wrapper">
             <table>
                 <tbody>
                     <tr>
                     </tr>
                     <tr class="big">
-                        <td class="notation">Source time</td>
+                        <td style="margin-left: 200px;"class="notation">Source time</td>
                         <td class="notation">Source time zone</td>
                         <td class="notation">Destination time zone</td>
                     </tr>
                     <tr>
-                        <td><input placeholder="2022-09-01 23:00:00" id="sourceDate"></td>
+                        <td><input style="height: 70px; width:300px; background-color: black;color: white; font-size: 22px;" placeholder="2022-09-01 23:00:00" id="sourceDate"></td>
                         <td>
                             <div class="container">
                                 <div class="button">
@@ -1013,26 +957,33 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3">
-                            <h3 style="color: white;">Result</h3>
+                        <td >
+                            <h3 style="color: rgb(0, 0, 0);">   </h3>
+                        </td>
+                        <td style="text-align: center ;">
+                            <h3 style="color: rgb(0, 0, 0);">Result</h3>
                         </td>
                     </tr>
+                    
                     <tr class="big-result big">
                         <div id="notation">
-                            <td colspan="3" style="color: white;" id="result">2022-10-14 15:12:33</td>
+                            <td style="color: rgb(0, 0, 0); font-size: 30px; border-radius: 9px; padding: 20px;" id="result">2022-10-14 15:12:33</td>
                         </div>
 
                     </tr>
                     <tr class="small">
-                        <td colspan="3" id="error"></td>
+                        <td id="error"></td>
                     </tr>
                 </tbody>
             </table>
+            <div>
+
+            </div>
         </div>
+    
     </div>
-
-
-
+<hr style="color: black;">
+    <h2 style="text-align: center;" >Time aound the world</h2>
     <script src="https://cdn.logwork.com/widget/text.js"></script>
 
     <div class="grid-container">
@@ -1076,10 +1027,6 @@
             <a href="https://logwork.com/current-time-in-beijing-china" class="clock-widget-text" data-timezone="Asia/Harbin" data-language="en">Beijing, China, Beijing</a>
         </div>
     </div>
-
-
-
-
 
 
     <script type="module">
@@ -1134,7 +1081,5 @@
 
 
     //]]></script>
-
 </body>
-
 </html>
