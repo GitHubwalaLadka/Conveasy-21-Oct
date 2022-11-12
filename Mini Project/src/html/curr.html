@@ -17,61 +17,63 @@
 
 
 
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      /* Set the navbar to fixed position */
+      width: 100%;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 10px;
+    }
+
+    .grid-item {
+
+      padding: 10px;
+      margin-left: 0;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .left {
+      text-align: right;
+    }
+
+    .right {
+      text-align: left;
+    }
+  </style>
   <header>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      .topnav {
-        overflow: hidden;
-        background-color: #333;
-        position: fixed; /* Set the navbar to fixed position */
-        width: 100%;
-      }
-
-      .topnav a {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
-
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-
-      .topnav a.active {
-        background-color: #04AA6D;
-        color: white;
-      }
-
-      .grid-container {
-        display: grid;
-        grid-template-columns: auto auto;
-        padding: 10px;
-      }
-
-      .grid-item {
-
-        padding: 10px;
-        margin-left: 0;
-        font-size: 30px;
-        text-align: center;
-      }
-
-      .left {
-        text-align: right;
-      }
-
-      .right {
-        text-align: left;
-      }
-    </style>
     <div class="topnav">
       <a class="active" href="index.html">Conveasy</a>
       <a href="time.html">Time Converter</a>
@@ -80,10 +82,13 @@
     </div>
   </header>
 
-    <img src="../img/icon.png" alt="money">
-    <h1 style="text-align: center;">Exchange Rate Calculator</h1>
+  <img src="../img/icon.png" style="  text-align:center;
+  display:block; padding-top: 50px;   margin-left: auto;
+  margin-right: auto;width: 10%;" alt="money">
+  <h1 style="text-align: center;">Exchange Rate Calculator</h1>
 
-  <p style="color:#263F44; text-decoration:dotted; font-size: larger; text-align: center;">Choose the currency and the amounts to get the
+  <p style="color:#263F44; text-decoration:dotted; font-size: larger; text-align: center;">Choose the currency and the
+    amounts to get the
     exchange rate</p>
 
 
@@ -246,8 +251,7 @@
       </select>
     </div>
     <div class="grid-item right">
-      <input style="background-color:#263F44; border-radius: 10px;" type="number" class="btn-dark" id="input_amount"
-        placeholder="0" value="1">
+      <input type="number" class="btn-dark" id="input_amount" placeholder="0" value="1">
     </div>
   </div>
 
@@ -414,14 +418,44 @@
       </select>
     </div>
     <div class="grid-item right">
-      <input style="background-color: #263F44; border-radius: 10px;" type="number" class="btn-dark" id="output_amount"
-        placeholder="0" value="1">
+      <input type="number" class="btn-dark" id="output_amount" placeholder="0" value="1">
     </div>
   </div>
   <div class="result ">
     <div class="rate" id="rate"></div>
   </div>
+  <!-- Simple Currency Rates Table START -->
+  <link rel="stylesheet" type="text/css" href="//www.exchangerates.org.uk/widget/ER-SCRT2-css.php?w=180&nb=10&bdrc=e0e0e0&mbg=ffffff&fc=333333&tc=333333" media="screen" />
+  <div id="erscrt2">
+    <div id="erscrt2-widget"></div>
 
+    </div>
+    <script type="text/javascript">
+      var tz = 'userset';
+      var w = '180';
+      var mc = 'GBP';
+      var nb = '10';
+      var c1 = 'USD';
+      var c2 = 'EUR';
+      var c3 = 'AUD';
+      var c4 = 'JPY';
+      var c5 = 'INR';
+      var c6 = 'CAD';
+      var c7 = 'ZAR';
+      var c8 = 'NZD';
+      var c9 = 'SGD';
+      var c10 = 'CNY';
+      var t = 'Live Exchange Rates';
+      var tc = '333333';
+      var bdrc = 'e0e0e0';
+      var mbg = 'ffffff';
+      var fc = '333333';
+
+      var ccHost = (("https:" == document.location.protocol) ? "https://www." : "http://www.");
+      document.write(unescape("%3Cscript src='" + ccHost + "exchangerates.org.uk/widget/ER-SCRT2-1.php' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+  </div>
+  <!-- Simple Currency Rates Table END -->
 
   </div>
 
