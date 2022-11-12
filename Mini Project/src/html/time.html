@@ -1019,61 +1019,103 @@
 
 
 
-    <div>
-        <script src="https://cdn.logwork.com/widget/text.js"></script>
-<a href="https://logwork.com/current-time-in-mumbai-india-maharashtra" class="col-1 clock-widget-text" data-timezone="Asia/Kolkata" data-language="en">Mumbai, India</a>
+    <script src="https://cdn.logwork.com/widget/text.js"></script>
 
-<a href="https://logwork.com/current-time-in-mumbai-india-maharashtra" class="col-2 clock-widget-text" data-timezone="Asia/Kolkata" data-language="en">Mumbai, India</a>
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="https://logwork.com/current-time-in-mumbai-india-maharashtra" class="clock-widget-text"
+                data-timezone="Asia/Kolkata" data-language="en">Mumbai, India, Mahārāshtra</a>
+        </div>
+
+        <div class="grid-item">
+            <a href="https://logwork.com/current-time-in-london-united-kingdom-city-of-london" class="clock-widget-text"
+                data-timezone="Europe/London" data-language="en">London, United Kingdom, City of London</a>
+        </div>
+
+        <div class="grid-item">
+            <a href="https://logwork.com/current-time-in-australia-plains-australia-south-australia"
+                class="clock-widget-text" data-timezone="Australia/Adelaide" data-language="en">Australia Plains,
+                Australia, South Australia</a>
+        </div>
+
+        <div class="grid-item">
+            <a href="https://logwork.com/current-time-in-new-york-united-states" class="clock-widget-text"
+                data-timezone="America/New_York" data-language="en">New York, United States, New York</a>
+        </div>
+
+        <div class="grid-item">
+            <a href="https://logwork.com/current-time-in-tokyo-japan" class="clock-widget-text"
+                data-timezone="Asia/Tokyo" data-language="en">Tokyo, Japan, Tōkyō</a>
+        </div>
+
+        <div class="grid-item">
+            <a href="https://logwork.com/current-time-in-toronto-canada-ontario" class="clock-widget-text"
+                data-timezone="America/Toronto" data-language="en">Toronto, Canada, Ontario</a>
+        </div>
+        <div class="grid-item">
+            <a href="https://logwork.com/current-time-in-rio-de-janeiro-brazil" class="clock-widget-text" data-timezone="America/Sao_Paulo" data-language="en">Rio de Janeiro, Brazil, Rio de Janeiro</a>
+        </div>
+        <div class="grid-item">
+            <a href="https://logwork.com/current-time-in-chicago-united-states-illinois" class="clock-widget-text" data-timezone="America/Chicago" data-language="en">Chicago, United States, Illinois</a>
+        </div>
+        <div class="grid-item">
+            <a href="https://logwork.com/current-time-in-beijing-china" class="clock-widget-text" data-timezone="Asia/Harbin" data-language="en">Beijing, China, Beijing</a>
+        </div>
     </div>
-   
-        <script type="module">
+
+
+
+
+
+
+    <script type="module">
         import { minitz } from "https://cdn.jsdelivr.net/gh/hexagon/minitz@3.0.0/dist/minitz.min.mjs";
 
-            // Handle custome time zone conversion
-            let allTimezones = Intl.supportedValuesOf('timeZone'),
-                inputTimeElm = document.getElementById('sourceDate'),
-                resultElm = document.getElementById('result'),
-                errorElm = document.getElementById('error'),
-                sourceTzElm = document.getElementById('sourceTz'),
-                destTzElm = document.getElementById('destTz');
+        // Handle custome time zone conversion
+        let allTimezones = Intl.supportedValuesOf('timeZone'),
+            inputTimeElm = document.getElementById('sourceDate'),
+            resultElm = document.getElementById('result'),
+            errorElm = document.getElementById('error'),
+            sourceTzElm = document.getElementById('sourceTz'),
+            destTzElm = document.getElementById('destTz');
 
-            allTimezones.forEach((t) => {
-                sourceTzElm.appendChild(new Option(t, t));
-                destTzElm.appendChild(new Option(t, t));
-            });
+        allTimezones.forEach((t) => {
+            sourceTzElm.appendChild(new Option(t, t));
+            destTzElm.appendChild(new Option(t, t));
+        });
 
-            const recalculate = () => {
-                let result = "Error",
-                    errorMessage = "";
-                try {
-                    result = minitz.fromTZISO(inputTimeElm.value, sourceTzElm.value).toLocaleString('sv-SE', {
-                        timeZone: destTzElm.value
-                    });
-                } catch (e) {
-                    errorMessage = e.toString();
-                }
-                resultElm.innerHTML = result;
-                errorElm.innerHTML = errorMessage;
-            };
+        const recalculate = () => {
+            let result = "Error",
+                errorMessage = "";
+            try {
+                result = minitz.fromTZISO(inputTimeElm.value, sourceTzElm.value).toLocaleString('sv-SE', {
+                    timeZone: destTzElm.value
+                });
+            } catch (e) {
+                errorMessage = e.toString();
+            }
+            resultElm.innerHTML = result;
+            errorElm.innerHTML = errorMessage;
+        };
 
-            inputTimeElm.addEventListener('change', () => {
-                recalculate()
-            });
-            inputTimeElm.addEventListener('keypress', () => {
-                recalculate()
-            });
-            sourceTzElm.addEventListener('change', () => {
-                recalculate()
-            });
-            destTzElm.addEventListener('change', () => {
-                recalculate()
-            });
+        inputTimeElm.addEventListener('change', () => {
+            recalculate()
+        });
+        inputTimeElm.addEventListener('keypress', () => {
+            recalculate()
+        });
+        sourceTzElm.addEventListener('change', () => {
+            recalculate()
+        });
+        destTzElm.addEventListener('change', () => {
+            recalculate()
+        });
 
-            // Seed input time element with current time
-            inputTimeElm.value = new Date().toLocaleString('sv-SE');
+        // Seed input time element with current time
+        inputTimeElm.value = new Date().toLocaleString('sv-SE');
 
-            // Recalculate instantly
-            recalculate();
+        // Recalculate instantly
+        recalculate();
 
 
 
