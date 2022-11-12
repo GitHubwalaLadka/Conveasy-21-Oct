@@ -1,0 +1,73 @@
+.money-img{
+    margin-left: 50%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+
+    
+    padding: 10px;
+    margin-left: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+.left {
+    text-align: right;
+}
+
+.right {
+    text-align: left;
+}
+
+button#exchange {
+    width: 80px;
+    height: 80px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    color: #213a25;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 0.3rem;
+    border: none;
+    /* border: 2px solid #000;*/
+    border-radius: 50%;
+    margin-left: 50%;
+}
+
+button#exchange:hover {
+    color: #213a25;
+    background-color: #569456;
+    border: none;
+    border-radius: 50%;
+}
+
+button#exchange:active {}
+
+.rate {
+
+    color: #5f2419;
+    width: 500px;
+    height: 35px;
+    border-radius: 15px;
+    border-radius: 35px;
+    margin-top: 80px;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    text-align: center;
+}
+.result {
+
+display: flex;
+align-items: center;
+justify-content: center;
+}

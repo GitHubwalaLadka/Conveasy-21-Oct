@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #FFEBAD;
+  background-color: white;
 
   flex-direction: column;
   align-items: center;
@@ -32,45 +32,13 @@ p {
   text-align: center;
 }
 
-.btn {
-  color: white;
-  background: var(--primary-color);
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 12px;
-  padding: 50px 12px;
-}
+
 
 .money-img {
   width: 150px;
 }
 
-.button {
-  padding: 30px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  left: 50px;
-  border-color: #263F44;
-  border-width: 5px;
-  border-radius: 10px;
-}
 
-.button select {
-  padding: 10px 20px 10px 10px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 1px solid #dedede;
-  font-size: 20px;
-}
-
-.button input {
-  border: 0;
-  background: transparent;
-  font-size: 30px;
-  text-align: right;
-}
 
 .swap-rate-container {
   size: px;
@@ -122,52 +90,8 @@ select:focus, input:focus, button:focus {
   color: white
 }
 
-.time{
-  height: 80px;
-  width: 300px;
-  text-align: center;
-  border-radius: 70px;
-  border-color: #263F44;
-}
-
-#result{
-  background-color: rgb(74, 76, 39)   ;
-}
-
-#sourceDate{
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 25 ;
-  color: white;
-  text-align: center;
-  background-color: #263F44;
-  border-color: #263F44;
-  border-radius: 3cm;
-}
-
-.time-header{
-  text-align: center;
-  color: white;
-  margin:0px;
-  position: relative;
-  left:80px; 
-  top:2px;
-}
 
 
-
-
-
-.td{
-  color: #ccc
-}
-
-.notation{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: xx-large;
-  color: #263F44;
-  padding-top: 20px;
-  
-}
 
 .{
   color: white;
@@ -177,25 +101,15 @@ select:focus, input:focus, button:focus {
   border-radius: 1cm;
 }
 
-.big-result
-{
-  display: inline;
-  margin-left: 101%;
-}
 
-.navbar-custom{
-  background-color:#019267;
- 
-}
-
-.grid-container {
+.grid-container1 {
   margin-bottom: 0;
   display: grid;
   grid-template-columns: auto auto auto;
 
   padding: 10px;
 }
-.grid-item {
+.grid-item1 {
 
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
@@ -204,24 +118,6 @@ select:focus, input:focus, button:focus {
   margin: 10px;
 }
 
-
-
-.clock-widget-text{
-  font-size: 20px;
-}
-
-.col-1 {width: 50%;}
-.col-2 {width: 50%;}
-.col-3 {width: 50%;}
-.col-4 {width: 50%;}
-.col-5 {width: 50%;}
-.col-6 {width: 50%;}
-.col-7 {width: 50%;}
-.col-8 {width: 50%;}
-.col-9 {width: 50%;}
-.col-10 {width: 50%;}
-.col-11 {width: 50%;}
-.col-12 {width: 50%;}
 
 .cards{
 

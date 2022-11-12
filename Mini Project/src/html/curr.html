@@ -1,44 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head class="ifont">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conveasy | Currency Calculator</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/curr.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
-    <link rel="icon" href="logo-no-background11.png">
+
+  <link rel="icon" href="logo-no-background11.png">
 </head>
-<body style="background-color: #FFEBAD;">
+
+<body style="background-color: white">
+
+
+
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom" style="padding-left: 20%; padding-right:20%">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="logo-no-background.png" width="auto" height="40" class="d-inline-block align-top" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse"  id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0 ml-auto">
-            <li class="nav-item">
-              <a class="nav-link active" style="color:#FFD369; font-size: larger;" aria-current="page" href="index.html"><strong>Home</strong></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="color:#FFD369; font-size: larger;" href="time.html"><strong>Time Convertor</strong></a>
-            </li>
-          </ul>
-          </div>
-      </div>
-    </nav>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /* Set the navbar to fixed position */
+        width: 100%;
+      }
+
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+      }
+
+      .grid-item {
+
+        padding: 10px;
+        margin-left: 0;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .left {
+        text-align: right;
+      }
+
+      .right {
+        text-align: left;
+      }
+    </style>
+    <div class="topnav">
+      <a class="active" href="index.html">Conveasy</a>
+      <a href="time.html">Time Converter</a>
+      <a href="curr.html">Currency Converter</a>
+      <a href="about.html">About</a>
+    </div>
   </header>
-  <img src="../img/icon.png" alt="money" class="money-img">
-  <h1>Exchange Rate Calculator</h1>
-  <p style="color:#263F44; text-decoration:dotted; font-size: larger;">Choose the currency and the amounts to get the exchange rate</p>
-  <div class="container">
-    <div class="button currency">
-      <select id="currency-one" class="btn-hv btn-dark button">
+
+    <img src="../img/icon.png" alt="money">
+    <h1 style="text-align: center;">Exchange Rate Calculator</h1>
+
+  <p style="color:#263F44; text-decoration:dotted; font-size: larger; text-align: center;">Choose the currency and the amounts to get the
+    exchange rate</p>
+
+
+  <div class="grid-container">
+    <div class="grid-item left">
+      <select id="input_currency" class="btn-hv btn-dark button">
         <option value="AED">AED - United Arab Emirates Dirham</option>
         <option value="AFN">AFN - Afghan Afghani</option>
         <option value="ALL">ALL - Albanian Lek</option>
@@ -67,7 +118,7 @@
         <option value="CDF">CDF - Congolese Franc</option>
         <option value="CHF">CHF - Swiss Franc</option>
         <option value="CLP">CLP - Chilean Peso</option>
-        <option value="COP">COP - Colombian Peso</option>        
+        <option value="COP">COP - Colombian Peso</option>
         <option value="CRC">CRC - Costa Rican Colon</option>
         <option value="CUP">CUP - Cuban Peso</option>
         <option value="CVE">CVE - Cape Verdean Escudo</option>
@@ -136,7 +187,7 @@
         <option value="NPR">NPR - Nepalese Rupee</option>
         <option value="NZD">NZD - New Zealand Dollar</option>
         <option value="OMR">OMR - Omani Rial</option>
-        <option value="PAB">PAB - Panamanian Balboa	</option>
+        <option value="PAB">PAB - Panamanian Balboa </option>
         <option value="PEN">PEN - Peruvian Nuevo Sol</option>
         <option value="PGK">PGK - Papua New Guinean Kina</option>
         <option value="PHP">PHP - Philippine Peso</option>
@@ -148,7 +199,7 @@
         <option value="RSD">RSD - Serbian Dinar</optiion>
         <option value="CNY">CNY - Chinese Renminbi (Yuan)</optiion>
         <option value="RUB">RUB - Russian Ruble</optiion>
-        <option value="RWF">RWF - Rwandan Franc</optiion>      
+        <option value="RWF">RWF - Rwandan Franc</optiion>
         <option value="SAR">SAR - Saudi Riyal</optiion>
         <option value="PYG">PYG - Paraguayan Guarani</option>
         <option value="RON">RON - Romanian Leu</option>
@@ -193,18 +244,20 @@
         <option value="ZMW">ZMW - Zambian Kwacha</option>
         <option value="ZWL">ZWL - Zimbabwean Dollar</option>
       </select>
-      <input style="background-color:#263F44; border-radius: 10px;" type="number" class="btn-dark" id="amount-one" placeholder="0" value="1">
     </div>
+    <div class="grid-item right">
+      <input style="background-color:#263F44; border-radius: 10px;" type="number" class="btn-dark" id="input_amount"
+        placeholder="0" value="1">
+    </div>
+  </div>
 
-    <!-- Button for swapping currencies -->
-    <div class="swap-rate-container">
-      <div class="swap-btn"></div>
-      <button class="btn-light btn-hv swap" id="swap" style="border-radius:10px; border-width: 5px;">Swap Currencies</button>
-      <div class="rate" style="color: black;" id="rate"></div>
-    </div>
-    
-    <div class="currency button">
-      <select id="currency-two" class="btn-hv btn-dark button">
+  <button id="exchange">
+    ↕
+  </button>
+
+  <div class="grid-container">
+    <div class="grid-item left">
+      <select id="output_currency" class="btn-hv btn-dark button">
         <option value="AED">AED - United Arab Emirates Dirham</option>
         <option value="AFN">AFN - Afghan Afghani</option>
         <option value="ALL">ALL - Albanian Lek</option>
@@ -233,7 +286,7 @@
         <option value="CDF">CDF - Congolese Franc</option>
         <option value="CHF">CHF - Swiss Franc</option>
         <option value="CLP">CLP - Chilean Peso</option>
-        <option value="COP">COP - Colombian Peso</option>        
+        <option value="COP">COP - Colombian Peso</option>
         <option value="CRC">CRC - Costa Rican Colon</option>
         <option value="CUP">CUP - Cuban Peso</option>
         <option value="CVE">CVE - Cape Verdean Escudo</option>
@@ -302,7 +355,7 @@
         <option value="NPR">NPR - Nepalese Rupee</option>
         <option value="NZD">NZD - New Zealand Dollar</option>
         <option value="OMR">OMR - Omani Rial</option>
-        <option value="PAB">PAB - Panamanian Balboa	</option>
+        <option value="PAB">PAB - Panamanian Balboa </option>
         <option value="PEN">PEN - Peruvian Nuevo Sol</option>
         <option value="PGK">PGK - Papua New Guinean Kina</option>
         <option value="PHP">PHP - Philippine Peso</option>
@@ -314,7 +367,7 @@
         <option value="RSD">RSD - Serbian Dinar</optiion>
         <option value="CNY">CNY - Chinese Renminbi (Yuan)</optiion>
         <option value="RUB">RUB - Russian Ruble</optiion>
-        <option value="RWF">RWF - Rwandan Franc</optiion>      
+        <option value="RWF">RWF - Rwandan Franc</optiion>
         <option value="SAR">SAR - Saudi Riyal</optiion>
         <option value="PYG">PYG - Paraguayan Guarani</option>
         <option value="RON">RON - Romanian Leu</option>
@@ -359,9 +412,26 @@
         <option value="ZMW">ZMW - Zambian Kwacha</option>
         <option value="ZWL">ZWL - Zimbabwean Dollar</option>
       </select>
-      <input style="background-color: #263F44; border-radius: 10px;" type="number" class="btn-dark" id="amount-two" placeholder="0" value="1">
+    </div>
+    <div class="grid-item right">
+      <input style="background-color: #263F44; border-radius: 10px;" type="number" class="btn-dark" id="output_amount"
+        placeholder="0" value="1">
     </div>
   </div>
-<script src="..\js\script.js"></script>
+  <div class="result ">
+    <div class="rate" id="rate"></div>
+  </div>
+
+
+  </div>
+
+  </div>
+
+
+  <script src="..\js\script.js"></script>
+
+
+
 </body>
+
 </html>
