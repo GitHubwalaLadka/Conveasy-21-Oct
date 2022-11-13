@@ -143,7 +143,7 @@ select:focus, input:focus, button:focus {
 }
 
 .wrapper{
-  height: 500px;
+  height: 400px;
   width: 720px;
   background-image: linear-gradient(to bottom left,#a4d1a2,#b1eece );
   background-color:#ffffff;
@@ -157,4 +157,5 @@ select:focus, input:focus, button:focus {
   text-align: center;
   align-content: center;
   margin: 0 auto;
+  margin-bottom: 90px;
 }

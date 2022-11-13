@@ -32,6 +32,11 @@
       width: 100%;
     }
 
+    .navbar-custom {
+      background-color: #019267;
+
+    }
+
     .topnav a {
       float: left;
       color: #f2f2f2;
@@ -73,13 +78,42 @@
       text-align: left;
     }
   </style>
-  <header>
+  <!-- <header>
     <div class="topnav">
       <a class="active" href="index.html">Conveasy</a>
       <a href="time.html">Time Converter</a>
       <a href="curr.html">Currency Converter</a>
       <a href="about.html">About</a>
     </div>
+  </header> -->
+
+  <header style="margin-bottom: 60px;">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="logo-no-background.png" width="auto" height="40"
+            class="d-inline-block align-top" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" style="color:#FFD369;font-size: larger" aria-current="page"
+                href="index.html"><strong>Home</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:#FFD369; font-size: larger" href="about.html"><strong>About
+                  Us</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:#FFD369; font-size: larger" href="time.html"><strong>Time Zone
+                  Convertor</strong></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <img src="../img/icon.png" style="  text-align:center;
@@ -424,13 +458,15 @@
       <div class="rate" id="rate"></div>
     </div>
   </div>
-  
+
 
   </div>
 
   </div>
 
-
+  <script
+    type="text/javascript">DukascopyApplet = { "type": "online_news", "params": { "header": false, "borders": false, "defaultLanguage": "en", "availableLanguages": ["ar", "bg", "cs", "de", "en", "es", "fa", "fr", "he", "hu", "it", "ja", "ms", "pl", "pt", "ro", "ru", "sk", "sv", "th", "uk", "zh"], "newsCategories": ["finance", "forex", "stocks", "company_news", "commodities"], "width": "100%", "height": "500", "adv": "popup" } };</script>
+  <script type="text/javascript" src="https://freeserv-static.dukascopy.com/2.0/core.js"></script>
   <script src="..\js\script.js"></script>
 
 

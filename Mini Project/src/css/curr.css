@@ -76,8 +76,8 @@ justify-content: center;
 .btn-dark{
     border-radius: 100px;
     padding-left: 20px;
-    height: 100px;
-    
+    height:60px;
+    font-size: 25px;
 }
 
 option{
@@ -93,4 +93,8 @@ input{
 
 datalist{
     font-size: 3x;
+}
+
+.wrapper{
+    margin-bottom: 40px;
 }
