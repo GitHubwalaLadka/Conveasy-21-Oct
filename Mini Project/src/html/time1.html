@@ -56,14 +56,34 @@
                 display: grid;
                 grid-template-columns: auto auto;
                 padding: 10px;
+
+
+
+
+
             }
 
             .grid-item {
-                
+
                 padding: 10px;
                 margin-left: 0;
                 font-size: 30px;
                 text-align: center;
+            }
+
+            @media(max-width: 400px) {
+                .grid-container {
+                    grid-template-columns: 1fr;
+                }
+
+            }
+
+            @media(max-width: 400px) {
+
+                .left,
+                .right {
+                    text-align: center;
+                }
             }
 
             .left {
@@ -74,7 +94,7 @@
                 text-align: left;
             }
 
-            .btn-dark{
+            .btn-dark {
                 border-radius: 30px;
                 height: 50px;
             }
@@ -99,7 +119,7 @@
     </div>
 
     <h1 style="text-align: center;">Convert Time Zones</h1>
-    <div style="width: auto; background-color: #04AA6D;">
+    <div style="background-color: #04AA6D;" class="wrapper">
         <div class="grid-container">
             <div class="grid-item left">
                 <td class="notation">Source time zone</td>
@@ -979,8 +999,14 @@
             <div class="grid-item right">
                 <input placeholder="2022-09-01 23:00:00" id="sourceDate">
             </div>
+        </div>
 
-            <div class="grid-item left"><ul>Converted Time:</ul></div>
+        <hr>
+
+        <div class="grid-container">
+            <div class="grid-item left">
+                <u>Converted Time:</u>
+            </div>
             <div class="grid-item right" id="result">2022-10-14 15:12:33</div>
         </div>
     </div>

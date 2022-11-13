@@ -108,6 +108,11 @@ select:focus, input:focus, button:focus {
   grid-template-columns: auto auto auto;
 
   padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .grid-item1 {
 
@@ -116,6 +121,8 @@ select:focus, input:focus, button:focus {
   font-size: 30px;
   text-align: center;
   margin: 10px;
+
+  
 }
 
 
@@ -133,4 +140,21 @@ select:focus, input:focus, button:focus {
 
   box-shadow: 5px 6px 6px 2px #000f1e;
   transform: scale(1.1);
+}
+
+.wrapper{
+  height: 500px;
+  width: 720px;
+  background-image: linear-gradient(to bottom left,#a4d1a2,#b1eece );
+  background-color:#ffffff;
+  margin-top: 10vh;
+  padding:20px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #000000;
+  opacity: 1;
+  text-align: center;
+  align-content: center;
+  margin: 0 auto;
 }
